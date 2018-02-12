@@ -10,6 +10,7 @@ t.describe('TrackView', () => {
       vnode: {
         attrs: {},
       },
+      viewmodel: {},
     };
     mockView = new (class extends TrackView {
       // mock
@@ -29,6 +30,14 @@ t.describe('TrackView', () => {
 
     t.it('Return component', () => {
       t.expect(subject()).equals(mockComponent);
+    });
+  });
+
+  t.describe('#vm', () => {
+    const subject = (() => mockView.vm);
+
+    t.it('Return viewmodel', () => {
+      t.expect(subject()).equals(mockComponent.viewmodel);
     });
   });
 
