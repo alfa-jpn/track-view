@@ -15,12 +15,15 @@ npm install track-view
 const TrackView = require('track-view');
 
 class Hoge extends TrackView {
-  render() {
+  render(_yield) {
     this.c;     // Instance of component.
     this.t;     // Wrapper I18n.t.
     this.attrs; // Attributes.
 
-    return m('div', 'Hello');
+    return m('div', [
+      m('h1', 'Hello!'),
+      yield
+    ]);
   }
 }
 ```
