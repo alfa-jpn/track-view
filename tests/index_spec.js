@@ -33,7 +33,7 @@ t.describe('TrackView', () => {
   });
 
   t.describe('#render', () => {
-    const subject = (() => mockView.render());
+    const subject = (() => mockView.render(''));
 
     t.it('Raise error', () => {
       let error = null;
