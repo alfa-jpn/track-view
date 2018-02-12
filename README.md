@@ -18,6 +18,7 @@ class Hoge extends TrackView {
   render(_yield) {
     this.c;     // Instance of component.
     this.t;     // Wrapper I18n.t.
+    this.vm;    // ViewModel.
     this.attrs; // Attributes.
 
     return m('div', [
